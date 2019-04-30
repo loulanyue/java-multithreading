@@ -6,7 +6,7 @@ public class PermGenErrTest {
     public static void main(String[] args) {
         for(int i=0; i <= 1000; i++){
             //将返回的随机字符串添加到字符串常量池中
-            getRandomString(1000000).intern();
+            getRandomString(10000000).intern();
         }
         System.out.println("Mission Complete!");
     }
