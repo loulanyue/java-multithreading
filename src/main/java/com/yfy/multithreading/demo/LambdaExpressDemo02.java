@@ -19,8 +19,6 @@ interface Foo {
 
 
 /**
- * @auther zzyy
- * <p>
  * 1    拷贝小括号， 写死右箭头， 落地大括号
  * 2    @FunctionalInterface
  * 3    default
