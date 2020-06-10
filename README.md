@@ -122,6 +122,7 @@ new Thread弊端：
 计数器闭锁是一个能阻塞主线程，让其他线程满足特定条件下主线程再继续执行的线程同步工具。
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200609153230864.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xvdWxhbnl1ZV8=,size_16,color_FFFFFF,t_70)
+
 图中，A为主线程，A首先设置计数器的数到AQS的state中，当调用await方法之后，A线程阻塞，随后每次其他线程调用countDown的时候，将state减1，直到计数器为0的时候，A线程继续执行。
 
 使用场景:  
@@ -164,62 +165,10 @@ public class CountDownLatchTest {
 可以让一组线程相互等待，当每个线程都准备好之后，所有线程才继续执行的工具类
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200609153258403.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xvdWxhbnl1ZV8=,size_16,color_FFFFFF,t_70)
+
 与CountDownLatch类似，都是通过计数器实现的，当某个线程调用await之后，计数器减1，当计数器大于0时将等待的线程包装成AQS的Node放入等待队列中，当计数器为0时将等待队列中的Node拿出来执行。
 
 与CountDownLatch的区别：  
 1. CountDownLatch是一个线程等其他线程，CyclicBarrier是多个线程相互等待
 2. CyclicBarrier的计数器能重复使用，调用多次
 
-使用场景：
-有四个游戏玩家玩游戏，游戏有三个关卡，每个关卡必须要所有玩家都到达后才能允许通过。其实这个场景里的玩家中如果有玩家A先到了关卡1，他必须等到其他所有玩家都到达关卡1时才能通过，也就是说线程之间需要相互等待。
-
-### 编程题
-交替打印奇偶数
-
-```java
-public class PrintOddAndEvenShu {
-    private int value = 0;
-
-    private synchronized void printOdd() {
-        while (value <= 100) {
-            if (value % 2 == 1) {
-                System.out.println(Thread.currentThread() + ": -" + value++);
-                this.notify();
-            } else {
-                try {
-                    this.wait();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-
-        }
-
-    }
-
-    private synchronized void printEven() {
-        while (value <= 100) {
-            if (value % 2 == 0) {
-                System.out.println(Thread.currentThread() + ": --" + value++);
-                this.notify();
-            } else {
-                try {
-                    this.wait();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-    }
-
-    public static void main(String[] args) throws InterruptedException {
-        PrintOddAndEvenShu print = new PrintOddAndEvenShu();
-        Thread t1 = new Thread(print::printOdd);
-        Thread t2 = new Thread(print::printEven);
-        t1.start();
-        t2.start();
-        t1.join();
-        t2.join();
-    }
-}
-```
