@@ -1,4 +1,4 @@
-package com.yfy.multithreading.demo;
+package com.yfy.multithreading.special;
 
 import java.util.List;
 import java.util.Map;
