@@ -3,7 +3,8 @@
 新建 -- 就绪 -- 运行 -- 阻塞 -- 就绪 -- 运行 -- 死亡
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200609153121547.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xvdWxhbnl1ZV8=,size_16,color_FFFFFF,t_70)
-### 问：你怎么理解多线程的
+
+### 怎么理解多线程的
 
 1. 定义：多线程是指从软件或者硬件上实现多个线程并发执行的技术。具有多线程能力的计算机因有硬件支持而能够在同一时间执行多于一个线程，进而提升整体处理性能。
 2. 存在的原因：因为单线程处理能力低。打个比方，一个人去搬砖与几个人去搬砖，一个人只能同时搬一车，但是几个人可以同时一起搬多个车。
@@ -15,10 +16,11 @@
 2. 并发工具synchronized、lock、CountDownLatch、CyclicBarrier、Semaphore
 
 ### 锁
-#### 锁是什么
+#### 什么是锁
 锁是在不同线程竞争资源的情况下来分配不同线程执行方式的同步控制工具，只有线程获取到锁之后才能访问同步代码，否则等待其他线程使用结束后释放锁
 
 #### [synchronized](https://mp.weixin.qq.com/s/0qyNS6wQUShhJHoMuyziMg)
+
 通常和wait，notify，notifyAll一块使用。    
 wait：释放占有的对象锁，释放CPU，进入等待队列只能通过notify/all继续该线程。  
 sleep：则是释放CPU，但是不释放占有的对象锁，可以在sleep结束后自动继续该线程。  
