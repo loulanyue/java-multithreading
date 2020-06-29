@@ -42,9 +42,7 @@ public class SingletonDemo {
 
         //并发多线程时，不加synchronized结果发生改变，没有唯一结果
         for (int i = 1; i <= 10; i++) {
-
             taskExe.execute(() -> SingletonDemo.getInstance());
-
         }
     }
 }
