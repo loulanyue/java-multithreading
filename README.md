@@ -11,6 +11,7 @@
 3. 实现：在Java里如何实现线程，Thread、Runnable、Callable。
 4. 问题：线程可以获得更大的吞吐量，但是开销很大，线程栈空间的大小、切换线程需要的时间，所以用到线程池进行重复利用，当线程使用完毕之后就放回线程池，避免创建与销毁的开销。
 
+
 ### 线程间通信的方式
 1. 等待通知机制 wait()、notify()、join()、interrupted()
 2. 并发工具synchronized、lock、CountDownLatch、CyclicBarrier、Semaphore
@@ -139,7 +140,8 @@ public class CountDownLatchTest {
 
     public static void main(String[] args) {
         ExecutorService executorService = Executors.newCachedThreadPool();
-        Semaphore semaphore = new Semaphore(3); //配置只能发布3个运行许可证
+        //配置只能发布3个运行许可证
+        Semaphore semaphore = new Semaphore(3); 
         for (int i = 0; i < 100; i++) {
             int finalI = i;
             executorService.execute(() -> {
