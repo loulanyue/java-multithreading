@@ -1,3 +1,22 @@
+# ForkJoin
+
+**Language:** English summary + 中文正文
+
+## English Summary
+
+This note explains the Java Fork/Join framework, which applies a divide-and-conquer approach to parallel computation.
+
+Main points:
+
+- what Fork/Join is and why it is useful
+- the three core types: `ForkJoinPool`, `ForkJoinTask`, and `RecursiveTask`
+- how a large task can be split into smaller subtasks and then merged
+- a recursive summation example implemented with `RecursiveTask`
+
+If you are reading in English, the detailed explanation below remains in Chinese.
+
+## 中文正文
+
 ##### 一、什么是ForkJoin
 
 大数据里面有map reduce ，Java从JDK1.7开始借鉴了这种分而治之的思想，提供ForkJoin框架用于并行执行任务，它的思想就是讲一个大任务分割成若干小任务，最终汇总每个小任务的结果得到这个大任务的结果

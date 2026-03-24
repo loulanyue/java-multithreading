@@ -1,3 +1,23 @@
+# Callable and FutureTask
+
+**Language:** English summary + 中文正文
+
+## English Summary
+
+This note compares several ways to create or run concurrent tasks in Java, then focuses on `Callable` and `FutureTask`.
+
+Main points:
+
+- common ways to start concurrent work: `Thread`, `Runnable`, `Callable`, and thread pools
+- differences between `Callable` and `Runnable`
+- what `FutureTask` is and when to use it
+- why `get()` can block and why it is usually called near the end of the main flow
+- a simple example that starts asynchronous tasks and retrieves results
+
+If you are reading in English, the full note below is still the original Chinese content.
+
+## 中文正文
+
 ##### 一、获得多线程的方式
 	
 	1.1 继承thread类

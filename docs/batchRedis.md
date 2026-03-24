@@ -1,3 +1,13 @@
+# Redis Batch Test Data
+
+**Language:** English summary + 中文正文
+
+## English Summary
+
+This short note shows how to generate a large Redis test data file in Linux, clean Windows-style line endings with Vim, and then import the commands into Redis with `redis-cli --pipe`.
+
+## 中文正文
+
 # 批量生成redis测试数据
 
 # 1.Linux Bash下面执行
