@@ -1,21 +1,33 @@
-**Language:** English | [简体中文](../README.zh-CN.md)
+**Language:** English | [简体中文](../README.md)
 
 # Docs Index
 
 This directory contains the topic-specific notes for the repository.
 
-The detailed content is currently written in Chinese, but the list below gives an English guide to what each document covers.
+The detailed content is still primarily written in Chinese, but the structure below is designed to help you quickly find the right topic and read it in a sensible order.
+
+## Recommended order
+
+1. [Multithreading Basics.md](Multithreading%20Basics.md)
+2. [JUC.md](JUC.md)
+3. [BlockingQueue.md](BlockingQueue.md)
+4. [Callable FutureTask.md](Callable%20FutureTask.md)
+5. [ForkJoin.md](ForkJoin.md)
+6. [batchRedis.md](batchRedis.md)
+
+## Topic map
 
 | File | Topic | Description |
 | --- | --- | --- |
-| [BlockingQueue.md](BlockingQueue.md) | BlockingQueue | What a blocking queue is, common queue implementations, and core APIs |
-| [Callable FutureTask.md](Callable%20FutureTask.md) | Callable and FutureTask | Ways to create threads, differences from `Runnable`, and async result handling |
-| [ForkJoin.md](ForkJoin.md) | ForkJoin | Fork/Join framework concepts, key classes, and a recursive task example |
-| [JUC.md](JUC.md) | JUC overview | Process vs thread, thread states, and common `java.util.concurrent` utilities |
-| [batchRedis.md](batchRedis.md) | Redis batch script | A helper note for generating Redis test data in bulk |
+| [Multithreading Basics.md](Multithreading%20Basics.md) | Multithreading basics | Core overview of lifecycle, locks, thread pools, and JUC tools |
+| [JUC.md](JUC.md) | JUC overview | Process vs thread, thread states, `wait` vs `sleep`, concurrency vs parallelism |
+| [BlockingQueue.md](BlockingQueue.md) | BlockingQueue | Blocking queue concepts, implementations, API styles, and example usage |
+| [Callable FutureTask.md](Callable%20FutureTask.md) | Callable and FutureTask | Ways to create concurrent tasks, return values, blocking result retrieval |
+| [ForkJoin.md](ForkJoin.md) | ForkJoin | Divide-and-conquer model, key classes, recursive task example |
+| [batchRedis.md](batchRedis.md) | Redis batch helper | Batch generation and import of Redis test data |
 
-## Reading advice
+## Notes
 
-- Start with [../README.md](../README.md) for the English overview.
-- Switch to [../README.zh-CN.md](../README.zh-CN.md) if you want the full Chinese notes.
-- Use this index as a bridge if you are navigating the repository in English.
+- Start from [../README.en.md](../README.en.md) for the English landing page.
+- Use [../README.md](../README.md) if you prefer the Chinese homepage.
+- File names are intentionally kept stable to avoid breaking existing links.
