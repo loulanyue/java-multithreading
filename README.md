@@ -40,6 +40,13 @@
 3. 然后按专题阅读 [docs/BlockingQueue.md](docs/BlockingQueue.md)、[docs/Callable FutureTask.md](docs/Callable%20FutureTask.md)、[docs/ForkJoin.md](docs/ForkJoin.md)。
 4. 最后按需阅读 [docs/batchRedis.md](docs/batchRedis.md) 这种实践型辅助笔记。
 
+## 面试复习路径
+
+- 先建立主线：线程生命周期、`synchronized`、`volatile`、线程池
+- 再补高频比较：`wait` / `sleep`、`synchronized` / `Lock`、并发 / 并行
+- 然后刷专题：`BlockingQueue`、`Callable/FutureTask`、`ForkJoin`
+- 最后做口述复盘：用“是什么 -> 解决什么问题 -> 什么时候用 -> 注意点”复述每个主题
+
 ## 面试速查
 
 | 主题 | 一句话记忆 |
