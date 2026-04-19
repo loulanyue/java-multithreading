@@ -9,17 +9,19 @@ The detailed content is still primarily written in Chinese, but the structure be
 ## Recommended order
 
 1. [Multithreading Basics.md](Multithreading%20Basics.md)
-2. [JUC.md](JUC.md)
-3. [BlockingQueue.md](BlockingQueue.md)
-4. [Callable FutureTask.md](Callable%20FutureTask.md)
-5. [ForkJoin.md](ForkJoin.md)
-6. [batchRedis.md](batchRedis.md)
+2. [Concurrency Comparison Sheet.md](Concurrency%20Comparison%20Sheet.md)
+3. [JUC.md](JUC.md)
+4. [BlockingQueue.md](BlockingQueue.md)
+5. [Callable FutureTask.md](Callable%20FutureTask.md)
+6. [ForkJoin.md](ForkJoin.md)
+7. [batchRedis.md](batchRedis.md)
 
 ## Topic map
 
 | File | Topic | Description |
 | --- | --- | --- |
 | [Multithreading Basics.md](Multithreading%20Basics.md) | Multithreading basics | Core overview of lifecycle, locks, thread pools, and JUC tools |
+| [Concurrency Comparison Sheet.md](Concurrency%20Comparison%20Sheet.md) | Comparison cheatsheet | One-page comparison of the most commonly confused concurrency concepts |
 | [JUC.md](JUC.md) | JUC overview | Process vs thread, thread states, `wait` vs `sleep`, concurrency vs parallelism |
 | [BlockingQueue.md](BlockingQueue.md) | BlockingQueue | Blocking queue concepts, implementations, API styles, and example usage |
 | [Callable FutureTask.md](Callable%20FutureTask.md) | Callable and FutureTask | Ways to create concurrent tasks, return values, blocking result retrieval |
