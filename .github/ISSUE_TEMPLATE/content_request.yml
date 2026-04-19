@@ -1,0 +1,21 @@
+name: Content request
+description: Suggest a missing concurrency topic, interview guide, or code example
+title: "[Content]: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: topic
+    attributes:
+      label: Requested topic
+      description: What should be added or expanded?
+      placeholder: e.g. AQS, CompletableFuture best practices, thread pool sizing, deadlock troubleshooting
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it matters
+      description: Explain the review or interview value
+      placeholder: This topic appears often in Java backend interviews and deserves a focused note
+

@@ -1,0 +1,23 @@
+name: Bug report
+description: Report broken links, markdown issues, or code sample problems
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What is wrong?
+      placeholder: Broken link, wrong code snippet, invalid build config, etc.
+    validations:
+      required: true
+  - type: textarea
+    id: location
+    attributes:
+      label: Affected location
+      description: Which file or section is affected?
+      placeholder: README.md, docs/JUC.md, pom.xml, etc.
+    validations:
+      required: true
+
