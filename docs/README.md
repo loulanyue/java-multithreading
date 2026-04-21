@@ -13,8 +13,9 @@ The detailed content is still primarily written in Chinese, but the structure be
 3. [BlockingQueue.md](BlockingQueue.md)
 4. [Callable FutureTask.md](Callable%20FutureTask.md)
 5. [CompletableFuture Guide.md](CompletableFuture%20Guide.md)
-6. [ForkJoin.md](ForkJoin.md)
-7. [batchRedis.md](batchRedis.md)
+6. [Deadlock Troubleshooting.md](Deadlock%20Troubleshooting.md)
+7. [ForkJoin.md](ForkJoin.md)
+8. [batchRedis.md](batchRedis.md)
 
 ## Topic map
 
@@ -25,6 +26,7 @@ The detailed content is still primarily written in Chinese, but the structure be
 | [BlockingQueue.md](BlockingQueue.md) | BlockingQueue | Blocking queue concepts, implementations, API styles, and example usage |
 | [Callable FutureTask.md](Callable%20FutureTask.md) | Callable and FutureTask | Ways to create concurrent tasks, return values, blocking result retrieval |
 | [CompletableFuture Guide.md](CompletableFuture%20Guide.md) | CompletableFuture | A compact guide to async composition, chaining, and exception handling |
+| [Deadlock Troubleshooting.md](Deadlock%20Troubleshooting.md) | Deadlock | A practical troubleshooting guide for classic deadlock scenarios |
 | [ForkJoin.md](ForkJoin.md) | ForkJoin | Divide-and-conquer model, key classes, recursive task example |
 | [batchRedis.md](batchRedis.md) | Redis batch helper | Batch generation and import of Redis test data |
 
