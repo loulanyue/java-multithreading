@@ -30,6 +30,8 @@
 | JUC 速查 | 进程 / 线程、线程状态、`wait` / `sleep`、并发 / 并行 | [docs/JUC.md](docs/JUC.md) |
 | BlockingQueue | 定义、分类、核心 API、使用示例 | [docs/BlockingQueue.md](docs/BlockingQueue.md) |
 | Callable / FutureTask | 异步任务返回值、阻塞获取结果、使用示例 | [docs/Callable FutureTask.md](docs/Callable%20FutureTask.md) |
+| CompletableFuture | 异步编排、链式调用、异常处理速查 | [docs/CompletableFuture Guide.md](docs/CompletableFuture%20Guide.md) |
+| 死锁排查 | 死锁成因、`jstack` 排查、预防思路 | [docs/Deadlock Troubleshooting.md](docs/Deadlock%20Troubleshooting.md) |
 | ForkJoin | 分治思想、三大核心类型、递归任务示例 | [docs/ForkJoin.md](docs/ForkJoin.md) |
 | Redis 小工具 | 批量生成 Redis 测试数据 | [docs/batchRedis.md](docs/batchRedis.md) |
 
@@ -37,8 +39,9 @@
 
 1. 先看 [docs/Multithreading Basics.md](docs/Multithreading%20Basics.md)，建立整体框架。
 2. 再看 [docs/JUC.md](docs/JUC.md)，补齐线程状态与基础术语。
-3. 然后按专题阅读 [docs/BlockingQueue.md](docs/BlockingQueue.md)、[docs/Callable FutureTask.md](docs/Callable%20FutureTask.md)、[docs/ForkJoin.md](docs/ForkJoin.md)。
-4. 最后按需阅读 [docs/batchRedis.md](docs/batchRedis.md) 这种实践型辅助笔记。
+3. 然后按专题阅读 [docs/BlockingQueue.md](docs/BlockingQueue.md)、[docs/Callable FutureTask.md](docs/Callable%20FutureTask.md)、[docs/CompletableFuture Guide.md](docs/CompletableFuture%20Guide.md)、[docs/ForkJoin.md](docs/ForkJoin.md)。
+4. 补看 [docs/Deadlock Troubleshooting.md](docs/Deadlock%20Troubleshooting.md)，建立并发故障排查思路。
+5. 最后按需阅读 [docs/batchRedis.md](docs/batchRedis.md) 这种实践型辅助笔记。
 
 ## 面试速查
 
